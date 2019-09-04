@@ -6,6 +6,7 @@ import axios from "axios";
 import Charts from "./components/Charts";
 import Navbar from "./components/Navbar";
 import Home from "./components/home";
+import About from "./components/about";
 
 import "./styles.scss";
 
@@ -25,6 +26,7 @@ const App = () => {
       <Navbar />
       <Route exact path='/' render={() => <Home />} />
       <Route path='/charts' render={() => <Charts coinData={coinData} />} />
+      <Route path='/about' render={() => <About />} />
     </div>
   );
 };
