@@ -7,6 +7,7 @@ import Charts from "./components/Charts";
 import Navbar from "./components/Navbar";
 import Home from "./components/home";
 import About from "./components/about";
+import IndividualChart from "./components/IndividualChart";
 
 import "./styles.scss";
 
@@ -25,7 +26,8 @@ const App = () => {
     <div className="App">
       <Navbar />
       <Route exact path='/' render={() => <Home />} />
-      <Route path='/charts' render={() => <Charts coinData={coinData} />} />
+      <Route exact path='/charts' render={() => <Charts coinData={coinData} />} />
+      <Route path='/charts/:id' render={(props) => <IndividualChart {...props} />} />
       <Route path='/about' render={() => <About />} />
     </div>
   );
