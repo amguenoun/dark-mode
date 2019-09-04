@@ -223,6 +223,11 @@ p{
 .charts {
   width: 80%;
   margin: 0 auto;
+  text-align:center;
+  
+  .coin-description{
+      font-size:1.6rem;
+  }
 }
 
 .chart__container {
@@ -232,6 +237,7 @@ p{
   justify-content: center;
   margin: 50px 0 0;
   width: 100%;
+ 
 }
 
 .chart-header {

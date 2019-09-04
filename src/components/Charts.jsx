@@ -6,16 +6,17 @@ const Charts = ({ coinData }) => {
   return (
     <div className="charts">
       {coinData.map(coin => (
-        <Link to={`/charts/${coin.id}`}>
-          <div className="chart__container" key={coin.name}>
+
+        <div className="chart__container" key={coin.name}>
+          <Link to={`/charts/${coin.id}`}>
             <h2 className="coin__title">{coin.name}</h2>
-            <h4 className="coin__symbol">{coin.symbol}</h4>
-            <div className="coin__logo">
-              <img src={coin.image} height="40" alt={coin.name} />
-            </div>
-            <Chart sparklineData={coin.sparkline_in_7d.price} />
+          </Link>
+          <h4 className="coin__symbol">{coin.symbol}</h4>
+          <div className="coin__logo">
+            <img src={coin.image} height="40" alt={coin.name} />
           </div>
-        </Link>
+          <Chart sparklineData={coin.sparkline_in_7d.price} />
+        </div>
       ))}
     </div>
   );

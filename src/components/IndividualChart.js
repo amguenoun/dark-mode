@@ -13,7 +13,7 @@ const IndividualChart = (props) => {
     }, [])
 
     return (
-        !coin ? <h1>Hey</h1> :
+        !coin ? <h1>Loading</h1> :
             <div className="charts">
                 <div className="chart__container" key={coin.name}>
                     <h2 className="coin__title">{coin.name}</h2>
@@ -23,6 +23,7 @@ const IndividualChart = (props) => {
                     </div>
                     <Chart sparklineData={coin.market_data.sparkline_7d.price} />
                 </div>
+                <div className="coin-description">{coin.description.en}</div>
             </div>
 
     );
